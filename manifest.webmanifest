@@ -1,7 +1,7 @@
 {
-  "name": "PWA Install App",
-  "short_name": "PWAApp",
-  "start_url": "index.html",
+  "name": "Mehboob",
+  "short_name": "Mehb",
+  "start_url": "ndex.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
