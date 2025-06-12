@@ -3,78 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Install App</title>
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 0;
-    }
-    #installPopup {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      padding: 20px;
-      width: 300px;
-      display: none;
-      z-index: 1000;
-    }
-    #installPopup h3 {
-      margin-top: 0;
-    }
-    #installPopup button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-right: 10px;
-    }
-    #installPopup button:hover {
-      background-color: #0056b3;
-    }
-    #installPopup .close {
-      background-color: #ccc;
-      color: black;
-    }
-  </style>
+  <title>PWA Test</title>
 </head>
 <body>
-  <div id="installPopup">
-    <h3>Install this App</h3>
-    <p>Add this app to your home screen for quick access.</p>
-    <button id="installBtn">Install</button>
-    <button class="close" onclick="document.getElementById('installPopup').style.display='none'">Not Now</button>
-  </div>
-  <script>
-    let deferredPrompt;
-    const installPopup = document.getElementById('installPopup');
-    const installBtn = document.getElementById('installBtn');
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      installPopup.style.display = 'block';
-    });
-    installBtn.addEventListener('click', async () => {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        if (outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        } else {
-          console.log('User dismissed the install prompt');
-        }
-        deferredPrompt = null;
-        installPopup.style.display = 'none';
-      }
-    });
-  </script>
+  <h1>Hello from PWA!</h1>
 </body>
 </html>
