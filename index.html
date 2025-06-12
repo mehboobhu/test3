@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PWA Test</title>
+  <title>Install App</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    #installContainer { display: none; padding: 1rem; border: 1px solid #ccc; margin-top: 2rem; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
 </head>
 <body>
-  <h1>Hello from PWA!</h1>
+  <h1>Install our PWA App</h1>
+  <div id="installContainer">
+    <p>Install this app on your device.</p>
+    <button id="installBtn">Install</button>
+  </div>
+  <script src="app.js" defer></script>
 </body>
 </html>

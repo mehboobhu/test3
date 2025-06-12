@@ -1,7 +1,7 @@
 {
   "name": "PWA Install App",
-  "short_name": "InstallApp",
-  "start_url": "/",
+  "short_name": "PWAApp",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
